@@ -39,3 +39,8 @@ a.editable-empty {
 .mailbox-attachments li {
     width: 300px !important;
 }
+
+a.table-operation {
+    margin-left: 2px;
+    margin-right: 2px;
+}

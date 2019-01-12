@@ -145,8 +145,8 @@ class Actions extends AbstractDisplayer
     protected function renderView()
     {
         return <<<EOT
-<a href="{$this->getResource()}/{$this->getKey()}">
-    <i class="fa fa-eye"></i>
+<a class="label label-primary table-operation" href="{$this->getResource()}/{$this->getKey()}">
+    详情
 </a>
 EOT;
     }
@@ -159,8 +159,8 @@ EOT;
     protected function renderEdit()
     {
         return <<<EOT
-<a href="{$this->getResource()}/{$this->getKey()}/edit">
-    <i class="fa fa-edit"></i>
+<a class="label label-primary table-operation" href="{$this->getResource()}/{$this->getKey()}/edit">
+    编辑
 </a>
 EOT;
     }
@@ -224,8 +224,8 @@ SCRIPT;
         Admin::script($script);
 
         return <<<EOT
-<a href="javascript:void(0);" data-id="{$this->getKey()}" class="{$this->grid->getGridRowName()}-delete">
-    <i class="fa fa-trash"></i>
+<a href="javascript:void(0);" data-id="{$this->getKey()}" class="{$this->grid->getGridRowName()}-delete label label-primary table-operation">
+    删除
 </a>
 EOT;
     }
