@@ -69,7 +69,7 @@ class LogController extends Controller
             $filter->like('path');
             $filter->equal('ip');
         });
-
+        $grid->disableExport();
         return $grid;
     }
 

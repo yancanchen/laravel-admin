@@ -105,7 +105,8 @@ class RoleController extends Controller
                 $actions->disableDelete();
             });
         });
-
+        $grid->disableExport();
+        $grid->disableRowSelector();
         return $grid;
     }
 
@@ -131,6 +132,13 @@ class RoleController extends Controller
         $show->created_at(trans('admin.created_at'));
         $show->updated_at(trans('admin.updated_at'));
 
+        $show->panel()
+            ->tools(
+                function ($tools) {
+                    $tools->disableEdit();
+                    $tools->disableDelete();
+                }
+            );
         return $show;
     }
 
@@ -154,6 +162,24 @@ class RoleController extends Controller
 
         $form->display('created_at', trans('admin.created_at'));
         $form->display('updated_at', trans('admin.updated_at'));
+
+        $form->tools(
+            function (Form\Tools $tools) {
+                // 去掉`删除`按钮
+                $tools->disableDelete();
+            }
+        );
+
+        $form->footer(
+            function ($footer) {
+                // 去掉`查看`checkbox
+                $footer->disableViewCheck();
+                // 去掉`继续编辑`checkbox
+                $footer->disableEditingCheck();
+                // 去掉`继续创建`checkbox
+                $footer->disableCreatingCheck();
+            }
+        );
 
         return $form;
     }
