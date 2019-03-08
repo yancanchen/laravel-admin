@@ -14,5 +14,5 @@
 
     </div>
     <!-- Default to the left -->
-    <strong>沃创</strong>
+    <strong>&nbsp;</strong>
 </footer>
