@@ -56,7 +56,10 @@ trait HasAssets
         'vendor/laravel-admin/laravel-admin/laravel-admin.js',
         'vendor/laravel-admin/AdminLTE/plugins/chartjs/Chart.min.js',
         'vendor/laravel-admin/AdminLTE/plugins/fastclick/fastclick.min.js',
-        'vendor/laravel-admin/highcharts.js'
+        'vendor/laravel-admin/highcharts.js',
+        'vendor/laravel-admin/plupload-2.3.6/moxie.js',
+        'vendor/laravel-admin/plupload-2.3.6/plupload.dev.js',
+        'vendor/laravel-admin/qiniu1.0.4beat.min.js'
     ];
 
     /**
